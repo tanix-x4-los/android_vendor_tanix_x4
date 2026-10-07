@@ -3,4 +3,4 @@
 #
 
 AB_OTA_PARTITIONS += \
-    bootloader
+    odm_ext
