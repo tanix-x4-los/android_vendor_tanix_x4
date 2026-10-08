@@ -8,12 +8,18 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/tanix/x4/proprietary/product/etc/sysconfig/netflix.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/netflix.xml \
     vendor/tanix/x4/proprietary/recovery/root/system/etc/mesondisplay.cfg:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/mesondisplay.cfg \
+    vendor/tanix/x4/proprietary/vendor/etc/bluetooth/w1/aml_bt_rf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth/w1/aml_bt_rf.txt \
     vendor/tanix/x4/proprietary/vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc \
     vendor/tanix/x4/proprietary/vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.amlogic.rc \
     vendor/tanix/x4/proprietary/vendor/etc/mesondisplay.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/mesondisplay.cfg \
     vendor/tanix/x4/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.amlogic.xml \
     vendor/tanix/x4/proprietary/vendor/etc/permissions/droidlogic.software.netflix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/droidlogic.software.netflix.xml \
     vendor/tanix/x4/proprietary/vendor/lib/firmware/video/video_ucode.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/video/video_ucode.bin \
+    vendor/tanix/x4/proprietary/vendor/lib/firmware/w1/aml_wifi_rf.txt:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/w1/aml_wifi_rf.txt \
+    vendor/tanix/x4/proprietary/vendor/lib/firmware/w1/aml_wifi_rf_0321.txt:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/w1/aml_wifi_rf_0321.txt \
+    vendor/tanix/x4/proprietary/vendor/lib/firmware/w1/aml_wifi_rf_ampak.txt:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/w1/aml_wifi_rf_ampak.txt \
+    vendor/tanix/x4/proprietary/vendor/lib/firmware/w1/aml_wifi_rf_fn_link.txt:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/w1/aml_wifi_rf_fn_link.txt \
+    vendor/tanix/x4/proprietary/vendor/lib/firmware/w1/aml_wifi_rf_iton.txt:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/w1/aml_wifi_rf_iton.txt \
     vendor/tanix/x4/proprietary/vendor/lib/teetz/2088528d-102a-4716-b940-23fd9be04adf.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/2088528d-102a-4716-b940-23fd9be04adf.ta \
     vendor/tanix/x4/proprietary/vendor/lib/teetz/2c1a33c0-44cc-11e5-bc3b-0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/2c1a33c0-44cc-11e5-bc3b-0002a5d5c51b.ta \
     vendor/tanix/x4/proprietary/vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta \
@@ -30,6 +36,7 @@ PRODUCT_PACKAGES += \
     libakeymint \
     libakeymint_remote_prov_support \
     libamavutils \
+    libbt-vendor_aml \
     liboemcrypto \
     libsecmem \
     libHwAudio_dcvdec \
@@ -38,3 +45,6 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service-no-rkp.amlogic.xml \
     android.hardware.oemlock@1.0-service.droidlogic \
     android.hardware.security.keymint-service.amlogic
+
+PRODUCT_PACKAGES += \
+    vendor_lib_libbt-vendor_amlMulti_so

@@ -164,6 +164,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libbt-vendor_aml",
+    owner: "tanix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libbt-vendor_aml.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libbinder",
+                "libsystemcontrolservice",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "liboemcrypto",
     owner: "tanix",
     strip: {
@@ -369,4 +398,11 @@ cc_prebuilt_binary {
     prefer: true,
     relative_install_path: "hw",
     soc_specific: true,
+}
+
+install_symlink {
+    name: "vendor_lib_libbt-vendor_amlMulti_so",
+    soc_specific: true,
+    installed_location: "lib/libbt-vendor_amlMulti.so",
+    symlink_target: "/vendor/lib/libbt-vendor_aml.so",
 }
